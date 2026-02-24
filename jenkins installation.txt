@@ -1,0 +1,55 @@
+Prerequisites:
+--------------
+
+Ubuntu 20.04 / 22.04
+
+Java 11 or Java 17 (mandatory)
+
+
+How to install java in ubuntu:
+-------------------------------
+
+sudo apt update
+sudo apt install openjdk-17-jdk -y   ----for installing java 
+
+java -version --- for confirming jenkins installed or not.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+How to install jenkins:
+------------------------
+
+step 1:(adding jenkins repository)
+
+curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
+  /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+  
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+  
+step 2:(install jenkins)
+
+sudo apt update
+sudo apt install jenkins -y
+
+step 3: (start jenkins)
+
+sudo systemctl start jenkins
+sudo systemctl enable jenkins
+sudo systemctl status jenkins
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+How to access jenkins ui:
+-------------------------
+
+http://<your-server-ip>:8080
+
+How to unlock jenkins:
+----------------------
+
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+Paste password in browser
+
+Choose Install Suggested Plugins
+
+Create Admin User

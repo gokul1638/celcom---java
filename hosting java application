@@ -46,4 +46,13 @@ pulling orgin after someone update the code.
 	
 	-- nohup java -jar target/student-api-0.0.1-SNAPSHOT.jar > app.log 2>&1 &
 	
+========================================================================================================
+
+	-- ps -ef | grep java
+	
+		to see the process which are activelly running.
+		
+	-- kill <process id>
+	
+		to kill the process.
 	

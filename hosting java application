@@ -1,0 +1,38 @@
+pre -requrisites
+----------------
+
+	-- sudo apt update
+
+	-- sudo apt install openjdk-17-jdk -y
+		
+		this will install java.
+	
+	-- sudo apt install maven -y
+	
+		this will install maven.
+		
+	-- sudo apt install git -y
+		
+		this will install git .
+
+
+
+1.CLONE THE GIT REPOSITORY.
+
+	-- git clone https://github.com/gokul1638/celcom---java.git
+
+2. move into your project.
+
+	-- cd student_api
+
+3. Mavin build - for jar file generation
+
+	-- mvn clean package
+	
+	this will create a jar file in the target folder.
+	
+	 jar file - target/student-api-0.0.1-SNAPSHOT.jar
+	
+4. start the application
+
+	java -jar target/student-api-0.0.1-SNAPSHOT.jar
